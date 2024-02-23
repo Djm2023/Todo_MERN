@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
-
-mongoose.connect(
-  "mongodb+srv://devjyotidgr2023:UDgvTyrIiAmqbQiB@cluster0.cevr5bf.mongodb.net/Todo_App?retryWrites=true&w=majority"
-);
+import dotenv from "dotenv";
+dotenv.config({ path: "./config.env" });
+mongoose.connect(process.env.MONGODB);
 
 const db = mongoose.connection;
 
